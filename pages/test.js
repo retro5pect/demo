@@ -1,20 +1,13 @@
 export default function test() {
   return (
-    <div className="card w-96 bg-base-100 shadow-xl">
-      <figure>
-        <img
-          src="https://api.lorem.space/image/shoes?w=400&h=225"
-          alt="Shoes"
-        />
-      </figure>
-      <div className="card-body">
-        <h2 className="card-title">Shoes!</h2>
-        <p>
-          If a dowefawfwefwef!!!! haenug chews shoes whose shoes does he choose?
-        </p>
-        <div className="card-actions justify-end">
-          <button className="btn btn-primary">Buy Now</button>
-        </div>
+    <div>
+      <div>
+        <ul class="steps">
+          <li class="step step-primary">Register</li>
+          <li class="step step-primary">Choose plan</li>
+          <li class="step">Purchase</li>
+          <li class="step">Receive Product</li>
+        </ul>
       </div>
     </div>
   );
