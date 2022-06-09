@@ -12,13 +12,13 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <div class="navbar bg-base-100">
-          <div class="navbar-start">
-            <div class="dropdown">
-              <label tabindex="0" class="btn btn-ghost btn-circle">
+        <div className="navbar bg-base-100">
+          <div className="navbar-start">
+            <div className="dropdown">
+              <label tabindex="0" className="btn btn-ghost btn-circle">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
+                  className="h-5 w-5"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -33,7 +33,7 @@ export default function Home() {
               </label>
               <ul
                 tabindex="0"
-                class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+                className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
               >
                 <li>
                   <a>마이페이지</a>
@@ -47,14 +47,14 @@ export default function Home() {
               </ul>
             </div>
           </div>
-          <div class="navbar-center">
-            <a class="btn btn-ghost normal-case text-xl">exquiz.me</a>
+          <div className="navbar-center">
+            <a className="btn btn-ghost normal-case text-xl">exquiz.me</a>
           </div>
-          <div class="navbar-end">
-            <button class="btn btn-ghost btn-circle">
+          <div className="navbar-end">
+            <button className="btn btn-ghost btn-circle">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5"
+                className="h-5 w-5"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -67,11 +67,11 @@ export default function Home() {
                 />
               </svg>
             </button>
-            <button class="btn btn-ghost btn-circle">
-              <div class="indicator">
+            <button className="btn btn-ghost btn-circle">
+              <div className="indicator">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
+                  className="h-5 w-5"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -83,7 +83,7 @@ export default function Home() {
                     d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
                   />
                 </svg>
-                <span class="badge badge-xs badge-primary indicator-item"></span>
+                <span className="badge badge-xs badge-primary indicator-item"></span>
               </div>
             </button>
           </div>
@@ -95,27 +95,27 @@ export default function Home() {
 
         <p className={styles.description}>초대 코드를 입력하여 입장해보세요!</p>
         <span>
-          <input type="text" placeholder="Type here" class="input" />
-          <button class="btn btn-ghost">입장하기</button>
+          <input type="text" placeholder="Type here" className="input" />
+          <button className="btn btn-ghost">입장하기</button>
         </span>
 
         <div className={styles.grid}>
-          <a href="/host.js" className={styles.card}>
+          <a href="#" className={styles.card}>
             <h2>수업하기 &rarr;</h2>
             <p>학생들을 초대하여 새로운 수업 경험을 즐겨보세요</p>
           </a>
 
-          <a href="/test.js" className={styles.card}>
+          <a href="#" className={styles.card}>
             <h2>출제하기 &rarr;</h2>
             <p>다양한 문제들을 제작하여 퀴즈로 배포해보세요</p>
           </a>
 
-          <a href="/dash.js" className={styles.card}>
+          <a href="#" className={styles.card}>
             <h2>채점하기 &rarr;</h2>
             <p>학생 개인의 맞춤화된 지표를 통해 성취도를 설정해보세요 </p>
           </a>
 
-          <a href="/search.js" className={styles.card}>
+          <a href="#" className={styles.card}>
             <h2>검색하기 &rarr;</h2>
             <p>다른 사람이 만든 검증된 문제들을 탐색하고 적용해보세요</p>
           </a>
