@@ -1,5 +1,6 @@
 import { info } from "daisyui/src/colors";
 import Image from "next/image";
+import styles from "../styles/Home.module.css";
 
 export default function create() {
   return (
@@ -14,12 +15,12 @@ export default function create() {
       </div>
 
       <div className="flex justify-between">
-        <div className="w-40">
+        <div className="w-60">
           <div className="card card-compact w-38 bg-base-100 shadow-xl">
             <figure></figure>
             <div className="card-body">
               <h2 className="card-title">Q1.</h2>
-              <p>우리나라에서 가장 고도가 높은 산은?</p>
+              <p>우리나라에서 장마가 시작되는 계절은?</p>
             </div>
           </div>
 
@@ -27,7 +28,7 @@ export default function create() {
             <figure></figure>
             <div className="card-body">
               <h2 className="card-title">Q2.</h2>
-              <p>우리나라에서 장마가 시작되는 계절은?</p>
+              <p>우리나라에서 가장 고도가 높은 산은?</p>
             </div>
           </div>
 
@@ -47,8 +48,30 @@ export default function create() {
           </div>
         </div>
 
-        <div> hi </div>
-        <div className="w-40"></div>
+        <div>
+          <div className="card card-compact w-128 bg-base-100 shadow-xl">
+            <figure>
+              <Image
+                src="/../public/halla.jpeg"
+                alt="mountain"
+                width={300}
+                height={200}
+              />
+            </figure>
+            <div className="card-body">
+              <h2 className="card-title">[지구과학-중1]</h2>
+              <p className="text-xl">우리나라에서 가장 고도가 높은 산은?</p>
+            </div>
+          </div>
+
+          <div className="flex justify-center">
+            <button className="btn btn-wide">Wide</button>
+            <button className="btn btn-wide">Wide</button>
+            <button className="btn btn-wide">Wide</button>
+            <button className="btn btn-wide">Wide</button>
+          </div>
+        </div>
+        <div className="w-60"></div>
       </div>
     </div>
   );

@@ -15,7 +15,7 @@ export default function create() {
 
       <div className="flex justify-between">
         <div className="w-40">
-          <div className="card card-compact w-38 bg-base-100 shadow-xl">
+          <div className="card card-compact w-38 bg-base-100 shadow-xl hover:scale-125">
             <figure></figure>
             <div className="card-body">
               <h2 className="card-title">Q1.</h2>
@@ -23,7 +23,7 @@ export default function create() {
             </div>
           </div>
 
-          <div className="card card-compact w-38 bg-base-100 bg-gray-300 shadow-xl">
+          <div className="card card-compact w-38 bg-base-100 bg-gray-300 shadow-xl hover:scale-125">
             <figure></figure>
             <div className="card-body">
               <h2 className="card-title">Q2.</h2>
@@ -31,14 +31,14 @@ export default function create() {
             </div>
           </div>
 
-          <div className="card card-compact w-38 bg-base-100 shadow-xl">
+          <div className="card card-compact w-38 bg-base-100 shadow-xl hover:scale-125">
             <figure></figure>
             <div className="card-body">
               <h2 className="card-title">[Non-sense]</h2>
               <p>어떤 퀴즈가 나올까요?</p>
             </div>
           </div>
-          <div className="card card-compact w-38 bg-base-100 shadow-xl">
+          <div className="card card-compact w-38 bg-base-100 shadow-xl hover:scale-125">
             <figure></figure>
             <div className="card-body">
               <h2 className="card-title">Q3.</h2>
@@ -47,7 +47,18 @@ export default function create() {
           </div>
         </div>
 
-        <div> hi </div>
+        <div>
+          <div className="card card-compact w-96 bg-base-100 shadow-xl">
+            <figure></figure>
+            <div className="card-body">
+              <h2 className="card-title">Shoes!</h2>
+              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <div className="card-actions justify-end">
+                <button className="btn btn-primary">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="w-40"></div>
       </div>
     </div>
