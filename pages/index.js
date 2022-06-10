@@ -101,7 +101,7 @@ export default function Home() {
         </span>
 
         <div className={styles.grid}>
-          <Link href="/test">
+          <Link href="/teach">
             <a className={styles.card}>
               <h2>수업하기 &rarr;</h2>
               <p>학생들을 초대하여 새로운 수업 경험을 즐겨보세요</p>
