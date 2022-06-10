@@ -116,7 +116,7 @@ export default function create() {
                   </svg>
                 </button>
               </div>
-              <p>퀴즈1</p>
+              <p>Q1.</p>
             </div>
           </div>
 
@@ -140,7 +140,7 @@ export default function create() {
                   </svg>
                 </button>
               </div>
-              <p>퀴즈2</p>
+              <p>Q2.</p>
             </div>
           </div>
 
@@ -164,7 +164,7 @@ export default function create() {
                   </svg>
                 </button>
               </div>
-              <p>퀴즈3</p>
+              <p>Q3.</p>
             </div>
           </div>
         </div>
