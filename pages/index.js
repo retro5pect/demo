@@ -122,7 +122,7 @@ export default function Home() {
             </a>
           </Link>
 
-          <Link href="/test">
+          <Link href="/search">
             <a className={styles.card}>
               <h2>검색하기 &rarr;</h2>
               <p>다른 사람이 만든 검증된 문제들을 탐색하고 적용해보세요</p>
