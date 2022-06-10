@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -100,25 +101,33 @@ export default function Home() {
         </span>
 
         <div className={styles.grid}>
-          <a href="./test" className={styles.card}>
-            <h2>수업하기 &rarr;</h2>
-            <p>학생들을 초대하여 새로운 수업 경험을 즐겨보세요</p>
-          </a>
+          <Link href="/test">
+            <a className={styles.card}>
+              <h2>수업하기 &rarr;</h2>
+              <p>학생들을 초대하여 새로운 수업 경험을 즐겨보세요</p>
+            </a>
+          </Link>
 
-          <a href="/test" className={styles.card}>
-            <h2>출제하기 &rarr;</h2>
-            <p>다양한 문제들을 제작하여 퀴즈로 배포해보세요</p>
-          </a>
+          <Link href="/create">
+            <a className={styles.card}>
+              <h2>출제하기 &rarr;</h2>
+              <p>다양한 문제들을 제작하여 퀴즈로 배포해보세요</p>
+            </a>
+          </Link>
 
-          <a href="test" className={styles.card}>
-            <h2>채점하기 &rarr;</h2>
-            <p>학생 개인의 맞춤화된 지표를 통해 성취도를 설정해보세요 </p>
-          </a>
+          <Link href="/test">
+            <a className={styles.card}>
+              <h2>채점하기 &rarr;</h2>
+              <p>학생 개인의 맞춤화된 지표를 통해 성취도를 설정해보세요 </p>
+            </a>
+          </Link>
 
-          <a href="#" className={styles.card}>
-            <h2>검색하기 &rarr;</h2>
-            <p>다른 사람이 만든 검증된 문제들을 탐색하고 적용해보세요</p>
-          </a>
+          <Link href="/test">
+            <a className={styles.card}>
+              <h2>검색하기 &rarr;</h2>
+              <p>다른 사람이 만든 검증된 문제들을 탐색하고 적용해보세요</p>
+            </a>
+          </Link>
         </div>
       </main>
 
