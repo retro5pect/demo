@@ -169,7 +169,84 @@ export default function create() {
           </div>
         </div>
 
-        <div> hi </div>
+        <div>
+          <div clasNames="form-control w-full max-w-xs">
+            <label className="label">
+              <span className="label-text">Step 1. 퀴즈 질문을 입력하세요</span>
+            </label>
+            <input
+              type="text"
+              placeholder="Type here"
+              className="input input-bordered w-full max-w-xs"
+            />
+          </div>
+          <br />
+          <div clasNames="form-control w-full max-w-xs">
+            <label className="label">
+              <span className="label-text">Step 2. 퀴즈 내용을 입력하세요</span>
+            </label>
+            <input
+              type="text"
+              placeholder="Type here"
+              className="input input-bordered w-full max-w-xs"
+            />
+          </div>
+          <br />
+
+          <div clasNames="form-control w-full max-w-xs">
+            <label className="label">
+              <span className="label-text">Step 3. 퀴즈 선지를 입력하세요</span>
+            </label>
+          </div>
+
+          <div>
+            <div className="form-control">
+              <label className="label cursor-pointer">
+                <span className="label-text">1. 지리산</span>
+                <input
+                  type="radio"
+                  name="radio-6"
+                  className="radio checked:bg-red-500"
+                  checked
+                />
+              </label>
+            </div>
+            <div className="form-control">
+              <label className="label cursor-pointer">
+                <span className="label-text">2. 설악산</span>
+                <input
+                  type="radio"
+                  name="radio-6"
+                  className="radio checked:bg-blue-500"
+                  checked
+                />
+              </label>
+            </div>
+            <div className="form-control">
+              <label className="label cursor-pointer">
+                <span className="label-text">3. 한라산</span>
+                <input
+                  type="radio"
+                  name="radio-6"
+                  className="radio checked:bg-orange-500"
+                  checked
+                />
+              </label>
+            </div>
+            <div className="form-control">
+              <label className="label cursor-pointer">
+                <span className="label-text">4. 북한산</span>
+                <input
+                  type="radio"
+                  name="radio-6"
+                  className="radio checked:bg-green-500"
+                  checked
+                />
+              </label>
+            </div>
+          </div>
+        </div>
+
         <div className="w-48"></div>
       </div>
     </div>
