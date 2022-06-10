@@ -91,7 +91,7 @@ export default function Home() {
         </div>
 
         <h1 className={styles.title}>
-          <a>교육 경험의 새로운 패러다임</a>
+          <a className="no-underline">교육 경험의 새로운 패러다임</a>
         </h1>
 
         <p className={styles.description}>초대 코드를 입력하여 입장해보세요!</p>
@@ -132,13 +132,9 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Copyright © 2022 exquiz.me All rights reserved. | Team MUMOMU.
-        </a>
+        <Link href="https://github.com/AimHigher77" target="_blank">
+          <a>Copyright © 2022 exquiz.me All rights reserved. | Team MUMOMU.</a>
+        </Link>
       </footer>
     </div>
   );
