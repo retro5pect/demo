@@ -51,11 +51,11 @@ export default function Home() {
         </HStack>
         </span>
 
-    <span>
+    <Link href ="/part">
         <Button mb={10} mt={10} colorScheme='blue' variant='outline'>
     입장하기
   </Button>
-  </span>
+  </Link>
 
 
         <div className={styles.grid}>
@@ -73,9 +73,9 @@ export default function Home() {
             </a>
           </Link>
 
-          <Link href="/test">
+          <Link href="/feedback">
             <a className={styles.card}>
-              <h2 className="text-center">채점하기</h2>
+              <h2 className="text-center">평가받기</h2>
               <p>학생 개인의 맞춤화된 지표를 통해 성취도를 설정해보세요 </p>
             </a>
           </Link>
