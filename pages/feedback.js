@@ -1,10 +1,11 @@
 import { info } from "daisyui/src/colors";
 import Image from "next/image";
 import { Progress, Badge, Stat, StatGroup, StatLabel, StatNumber, StatHelpText, StatArrow, CircularProgress} from '@chakra-ui/react'
+import {Accordion, AccordionItem, AccordionButton, AccordionIcon, AccordionPanel, Box} from '@chakra-ui/react'
 
 export default function create() {
   return (
-    <div>
+    <div className="mx-10">
             <div className="navbar bg-base-100 bg-white">
   <div className="flex-none">
     <button className="btn btn-square btn-ghost">
@@ -20,15 +21,37 @@ export default function create() {
     </button>
   </div>
 </div>
-<CircularProgress valueText={"S"} value={30} size='120px' /> <span className="text-3xl"> 3학년 2반 진도율 </span>
+<CircularProgress valueText={"S"} value={30} size='120px' /> <span className="text-3xl"> 3학년 2반 진도율 : F...</span>
+
+<div>
+<Badge colorScheme='purple' mx = {1}>1번</Badge>
+<Badge colorScheme='red' mx = {1}>2번</Badge>
+<Badge colorScheme='orange' mx = {1}>3번</Badge>
+<Badge colorScheme='blue' mx = {1}>4번</Badge>
+<Badge colorScheme='blue' mx = {1}>5번</Badge>
+<Badge colorScheme='purple' mx = {1}>6번</Badge>
+<Badge colorScheme='green' mx = {1}>7번</Badge>
+<Badge colorScheme='orange' mx = {1}>8번</Badge>
+<Badge colorScheme='yellow' mx = {1}>9번</Badge>
+<Badge colorScheme='gray' mx = {1}>10번</Badge>
+<Badge colorScheme='red' mx = {1}>11번</Badge>
+<Badge colorScheme='blue' mx = {1}>12번</Badge>
+<Badge colorScheme='red' mx = {1}>13번</Badge>
+<Badge colorScheme='gray' mx = {1}>14번</Badge>
+<Badge colorScheme='green' mx = {1}>15번</Badge>
+<Badge colorScheme='green' mx = {1}>16번</Badge>
+<Badge colorScheme='yellow' mx = {1}>17번</Badge>
+<Badge colorScheme='red' mx = {1}>18번</Badge>
+<Badge colorScheme='purple' mx = {1}>19번</Badge>
+</div>
 
 <div className="my-30 mx-30"> 
   <hr />
   <br></br>
-  <span className="text-3xl"> 3학년 2반 18번 김민겸 </span>
-  <Badge colorScheme='green' mx = {1}>수학 마스터</Badge>
-  <Badge colorScheme='purple' mx = {1}>영어 그랜드마스터</Badge>
-  <Badge colorScheme='red' mx = {1}>멋난이</Badge>
+  <span className="text-3xl"> 🥇 김민겸</span>
+  <Badge colorScheme='green' mx = {1}>명랑한 소크라테스</Badge>
+  <Badge colorScheme='purple' mx = {1}>민겸공듀</Badge>
+  <Badge colorScheme='red' mx = {1}>뮤묘뮤</Badge>
   <Progress colorScheme='yellow' height='32px' value={20} />
 
 <StatGroup>
@@ -52,20 +75,29 @@ export default function create() {
 </StatGroup>
 <br />
 <hr></hr>
-
 </div>
 
-<div className="my-30 mx-30">
-  <hr></hr>
+<Accordion>
+  <AccordionItem>
+    <h2>
+      <AccordionButton>
+        <Box flex='1' textAlign='left'>
+          1단원. 우리나라의 다양한 하천
+        </Box>
+        <AccordionIcon />
+      </AccordionButton>
+    </h2>
+    <AccordionPanel pb={4}>
+    <div className="my-30 mx-30">
   <br></br>
-  <span className="text-3xl"> 1단원. 우리나라의 다양한 하천 </span>
+  <span className="text-2xl"> 1단원. 우리나라의 다양한 하천 </span>
   <Badge colorScheme='blue' mx = {1}>지구과학</Badge>
   <Badge colorScheme='gray' mx = {1}>고등학교</Badge>
-  <Progress colorScheme='green' height='32px' value={20} />
+  <Progress colorScheme='orange' height='32px' value={80} />
 
 <StatGroup>
   <Stat>
-    <StatLabel>정답률</StatLabel>
+    <StatLabel></StatLabel>
     <StatNumber>96.2%</StatNumber>
     <StatHelpText>
       <StatArrow type='increase' />
@@ -83,15 +115,27 @@ export default function create() {
   </Stat>
   </StatGroup>
     <br></br>
+    <hr></hr>
   </div>
+    </AccordionPanel>
+  </AccordionItem>
 
-
-<div className="my-30 mx-30"> 
-  <span className="text-3xl"> 2단원. 일반 상대성 이론 </span>
+  <AccordionItem>
+    <h2>
+      <AccordionButton>
+        <Box flex='1' textAlign='left'>
+          2단원. 일반 상대성 이론
+        </Box>
+        <AccordionIcon />
+      </AccordionButton>
+    </h2>
+    <AccordionPanel pb={4}>
+    <div className="my-30 mx-30">
+  <br></br> 
+  <span className="text-2xl"> 2단원. 일반 상대성 이론 </span>
   <Badge colorScheme='blue' mx = {1}>물리학</Badge>
   <Badge colorScheme='gray' mx = {1}>고등학교</Badge>
-  <Progress colorScheme='green' height='32px' value={20} />
-</div>
+  <Progress colorScheme='orange' height='32px' value={20} />
 
 <StatGroup>
   <Stat>
@@ -112,14 +156,27 @@ export default function create() {
     </StatHelpText>
   </Stat>
   </StatGroup>
+  <br></br>
+  <hr></hr>
+  </div>
+    </AccordionPanel>
+  </AccordionItem>
 
-
-<div className="my-30 mx-30"> 
-  <span className="text-3xl"> 3단원. 시스템 아키텍처(x64) </span>
+  <AccordionItem>
+    <h2>
+      <AccordionButton>
+        <Box flex='1' textAlign='left'>
+          3단원. 시스템 아키텍처(x64)
+        </Box>
+        <AccordionIcon />
+      </AccordionButton>
+    </h2>
+    <AccordionPanel pb={4}>
+    <div className="my-30 mx-30"> 
+  <span className="text-2xl"> 3단원. 시스템 아키텍처(x64) </span>
   <Badge colorScheme='blue' mx = {1}>컴퓨터공학</Badge>
   <Badge colorScheme='gray' mx = {1}>고등학교</Badge>
-  <Progress colorScheme='green' height='32px' value={20} />
-</div>
+  <Progress colorScheme = 'orange' height='32px' value={20} />
 
 <StatGroup>
   <Stat>
@@ -140,11 +197,11 @@ export default function create() {
     </StatHelpText>
   </Stat>
   </StatGroup>
+  </div>
+    </AccordionPanel>
+  </AccordionItem>
 
-
-
-
-
+</Accordion>
     </div>
   );
 }
