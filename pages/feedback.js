@@ -1,19 +1,25 @@
 import { info } from "daisyui/src/colors";
+import React, { useState } from 'react';
 import Image from "next/image";
-import { Progress, Badge, Stat, StatGroup, StatLabel, StatNumber, StatHelpText, StatArrow, CircularProgress} from '@chakra-ui/react'
-import {Accordion, AccordionItem, AccordionButton, AccordionIcon, AccordionPanel, Box} from '@chakra-ui/react'
+import Link from "next/link";
+import { Progress, Badge, Stat, StatGroup, StatLabel, StatNumber, StatHelpText, StatArrow, CircularProgress, useAccordionItemState} from '@chakra-ui/react'
+import { Accordion, AccordionItem, AccordionButton, AccordionIcon, AccordionPanel, Box} from '@chakra-ui/react'
+import { Tabs, TabList, TabPanels, Tab, TabPanel, Select, SimpleGrid } from '@chakra-ui/react'
 
 export default function create() {
   return (
     <div className="mx-10">
-            <div className="navbar bg-base-100 bg-white">
+
+    <div className="navbar bg-base-100 bg-white">
   <div className="flex-none">
     <button className="btn btn-square btn-ghost">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-5 h-5 stroke-current "><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
     </button>
   </div>
   <div className="flex-1">
+    <Link href="/../">
     <a className="btn btn-ghost normal-case text-xl">exquiz.me</a>
+    </Link>
   </div>
   <div className="flex-none">
     <button className="btn btn-square btn-ghost">
@@ -21,38 +27,101 @@ export default function create() {
     </button>
   </div>
 </div>
-<CircularProgress valueText={"S"} value={30} size='120px' /> <span className="text-3xl"> 3학년 2반 진도율 : F...</span>
+<Tabs variant='enclosed'>
+  <TabList>
+    <Tab>학생별 레포트</Tab>
+    <Tab>퀴즈별 레포트</Tab>
+  </TabList>
+  <TabPanels>
+    <TabPanel>
+    <p className="text-2xl">학급 관리</p>
+    
+    <Select placeholder='학급반을 선택하세요'>
+      <option value='option1'>3학년 1반</option>
+      <option value='option2'>3학년 2반</option>
+      <option value='option3'>3학년 3반</option>
+    </Select>
+    <br></br>
 
-<div>
-<Badge colorScheme='purple' mx = {1}>1번</Badge>
-<Badge colorScheme='red' mx = {1}>2번</Badge>
-<Badge colorScheme='orange' mx = {1}>3번</Badge>
-<Badge colorScheme='blue' mx = {1}>4번</Badge>
-<Badge colorScheme='blue' mx = {1}>5번</Badge>
-<Badge colorScheme='purple' mx = {1}>6번</Badge>
-<Badge colorScheme='green' mx = {1}>7번</Badge>
-<Badge colorScheme='orange' mx = {1}>8번</Badge>
-<Badge colorScheme='yellow' mx = {1}>9번</Badge>
-<Badge colorScheme='gray' mx = {1}>10번</Badge>
-<Badge colorScheme='red' mx = {1}>11번</Badge>
-<Badge colorScheme='blue' mx = {1}>12번</Badge>
-<Badge colorScheme='red' mx = {1}>13번</Badge>
-<Badge colorScheme='gray' mx = {1}>14번</Badge>
-<Badge colorScheme='green' mx = {1}>15번</Badge>
-<Badge colorScheme='green' mx = {1}>16번</Badge>
-<Badge colorScheme='yellow' mx = {1}>17번</Badge>
-<Badge colorScheme='red' mx = {1}>18번</Badge>
-<Badge colorScheme='purple' mx = {1}>19번</Badge>
+    <span>
+    <CircularProgress value={30} size='120px' valueText={"S"} />
+      <span className="text-3xl"> 3학년 2반 진도율</span>
+      </span>
+      <span>
+      </span>
+
+    <br></br>
+    <br></br>
+    <hr></hr>
+    <br></br>
+    <p className="text-2xl">학생 관리</p>
+      <div>
+<Badge colorScheme='purple' mx = {1}>강석진</Badge>
+<Badge colorScheme='red' mx = {1}>고동환</Badge>
+<Badge colorScheme='orange' mx = {1}>김민겸</Badge>
+<Badge colorScheme='blue' mx = {1}>김세진</Badge>
+<Badge colorScheme='blue' mx = {1}>김병환</Badge>
+<Badge colorScheme='purple' mx = {1}>박정석</Badge>
+<Badge colorScheme='green' mx = {1}>박태현</Badge>
+<Badge colorScheme='orange' mx = {1}>오진석</Badge>
+<Badge colorScheme='yellow' mx = {1}>오병우</Badge>
+<Badge colorScheme='gray' mx = {1}>이민식</Badge>
+<Badge colorScheme='red' mx = {1}>이상빈</Badge>
+<Badge colorScheme='blue' mx = {1}>이성준</Badge>
+<Badge colorScheme='red' mx = {1}>이정혁</Badge>
+<Badge colorScheme='gray' mx = {1}>이태민</Badge>
+<Badge colorScheme='green' mx = {1}>임동빈</Badge>
+<Badge colorScheme='green' mx = {1}>임준현</Badge>
+<Badge colorScheme='yellow' mx = {1}>정상수</Badge>
+<Badge colorScheme='red' mx = {1}>정지환</Badge>
+<Badge colorScheme='purple' mx = {1}>지정석</Badge>
 </div>
-
 <div className="my-30 mx-30"> 
-  <hr />
   <br></br>
   <span className="text-3xl"> 🥇 김민겸</span>
   <Badge colorScheme='green' mx = {1}>명랑한 소크라테스</Badge>
   <Badge colorScheme='purple' mx = {1}>민겸공듀</Badge>
   <Badge colorScheme='red' mx = {1}>뮤묘뮤</Badge>
   <Progress colorScheme='yellow' height='32px' value={20} />
+
+<StatGroup>
+  <Stat>
+    <StatLabel colorScheme='yellow'>정답률</StatLabel>
+    <StatNumber>96.2%</StatNumber>
+    <StatHelpText>
+      <StatArrow type='increase' />
+      23.36%
+    </StatHelpText>
+  </Stat>
+
+  <Stat>
+    <StatLabel>풀이 속도</StatLabel>
+    <StatNumber>보통</StatNumber>
+    <StatHelpText>
+      <StatArrow type='decrease' />
+      9.05%
+    </StatHelpText>
+  </Stat>
+</StatGroup>
+
+<br></br>
+<p className="text-2xl">최근에 푼 문제</p>
+<Accordion>
+  <AccordionItem>
+    <h2>
+      <AccordionButton>
+        <Box flex='1' textAlign='left'>
+          1단원. 우리나라의 다양한 하천
+        </Box>
+        <AccordionIcon />
+      </AccordionButton>
+    </h2>
+    <AccordionPanel pb={4}>
+    <div className="my-30 mx-30">
+  <br></br>
+  <span className="text-2xl"> 1단원. 우리나라의 다양한 하천 </span>
+  <Badge colorScheme='blue' mx = {1}>지구과학</Badge>
+  <Badge colorScheme='gray' mx = {1}>고등학교</Badge>
 
 <StatGroup>
   <Stat>
@@ -72,17 +141,13 @@ export default function create() {
       9.05%
     </StatHelpText>
   </Stat>
-</StatGroup>
-<br />
-<hr></hr>
-</div>
-
-<Accordion>
+  </StatGroup>
+  <Accordion>
   <AccordionItem>
     <h2>
       <AccordionButton>
         <Box flex='1' textAlign='left'>
-          1단원. 우리나라의 다양한 하천
+          문제 1
         </Box>
         <AccordionIcon />
       </AccordionButton>
@@ -90,30 +155,99 @@ export default function create() {
     <AccordionPanel pb={4}>
     <div className="my-30 mx-30">
   <br></br>
-  <span className="text-2xl"> 1단원. 우리나라의 다양한 하천 </span>
+  <span className="text-2xl"> 문제 1 </span>
   <Badge colorScheme='blue' mx = {1}>지구과학</Badge>
   <Badge colorScheme='gray' mx = {1}>고등학교</Badge>
-  <Progress colorScheme='orange' height='32px' value={80} />
 
-<StatGroup>
+    <p className="text-2xl">우리나라에서 가장 높은 산은 뭘까요?</p>
+    <SimpleGrid columns={2} spacing={5}>
+  <Box bg='Tomato' height='80px' className="text-center my-auto">
+  <span className="text-1xl"> 1. 설악산 </span>
   <Stat>
     <StatLabel></StatLabel>
     <StatNumber>96.2%</StatNumber>
     <StatHelpText>
-      <StatArrow type='increase' />
-      23.36%
     </StatHelpText>
   </Stat>
-
+  </Box>
+  <Box bg='DodgerBlue' height='80px' className="text-center my-auto">
+  <span className="text-1xl"> 2. 지리산 </span>
   <Stat>
-    <StatLabel>풀이 속도</StatLabel>
-    <StatNumber>보통</StatNumber>
+    <StatLabel></StatLabel>
+    <StatNumber>10%</StatNumber>
     <StatHelpText>
-      <StatArrow type='decrease' />
-      9.05%
     </StatHelpText>
   </Stat>
-  </StatGroup>
+  </Box>
+  <Box bg='Gold' height='80px' className="text-center my-auto">
+  <span className="text-1xl"> 3. 한라산 </span>
+  <Stat>
+    <StatLabel></StatLabel>
+    <StatNumber>70%</StatNumber>
+    <StatHelpText>
+    </StatHelpText>
+  </Stat>
+  </Box>
+  <Box bg='LimeGreen' height='80px' className="text-center my-auto">
+  <span className="text-1xl"> 4. 북한산 </span>
+  <Stat>
+    <StatLabel></StatLabel>
+    <StatNumber>96.2%</StatNumber>
+    <StatHelpText>
+    </StatHelpText>
+  </Stat>
+  </Box>
+</SimpleGrid>
+    <br></br>
+    <hr></hr>
+  </div>
+    </AccordionPanel>
+  </AccordionItem>
+
+  <AccordionItem>
+    <h2>
+      <AccordionButton>
+        <Box flex='1' textAlign='left'>
+          문제 2
+        </Box>
+        <AccordionIcon />
+      </AccordionButton>
+    </h2>
+    <AccordionPanel pb={4}>
+    <div className="my-30 mx-30">
+  <br></br> 
+  <span className="text-2xl"> 문제 2 </span>
+  <Badge colorScheme='blue' mx = {1}>물리학</Badge>
+  <Badge colorScheme='gray' mx = {1}>고등학교</Badge>
+
+
+  <br></br>
+  <hr></hr>
+  </div>
+    </AccordionPanel>
+  </AccordionItem>
+
+  <AccordionItem>
+    <h2>
+      <AccordionButton>
+        <Box flex='1' textAlign='left'>
+          문제 3
+        </Box>
+        <AccordionIcon />
+      </AccordionButton>
+    </h2>
+    <AccordionPanel pb={4}>
+    <div className="my-30 mx-30"> 
+  <span className="text-2xl"> 문제 3 </span>
+  <Badge colorScheme='blue' mx = {1}>컴퓨터공학</Badge>
+  <Badge colorScheme='gray' mx = {1}>고등학교</Badge>
+
+
+  </div>
+    </AccordionPanel>
+  </AccordionItem>
+
+</Accordion>
     <br></br>
     <hr></hr>
   </div>
@@ -135,7 +269,6 @@ export default function create() {
   <span className="text-2xl"> 2단원. 일반 상대성 이론 </span>
   <Badge colorScheme='blue' mx = {1}>물리학</Badge>
   <Badge colorScheme='gray' mx = {1}>고등학교</Badge>
-  <Progress colorScheme='orange' height='32px' value={20} />
 
 <StatGroup>
   <Stat>
@@ -176,7 +309,6 @@ export default function create() {
   <span className="text-2xl"> 3단원. 시스템 아키텍처(x64) </span>
   <Badge colorScheme='blue' mx = {1}>컴퓨터공학</Badge>
   <Badge colorScheme='gray' mx = {1}>고등학교</Badge>
-  <Progress colorScheme = 'orange' height='32px' value={20} />
 
 <StatGroup>
   <Stat>
@@ -202,6 +334,17 @@ export default function create() {
   </AccordionItem>
 
 </Accordion>
+<br />
+<hr></hr>
+</div>
+    </TabPanel>
+    <TabPanel>
+      
+    </TabPanel>
+  </TabPanels>
+</Tabs>
+
+
     </div>
   );
 }
