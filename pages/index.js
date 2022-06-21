@@ -61,7 +61,7 @@ export default function Home() {
         <div className={styles.grid}>
           <Link href="/teach">
             <a className={styles.card}>
-              <h2 className="text-center">수업하기</h2>
+              <h2 className="text-center hover:bg-violet-600 active:bg-violet-700 focus:outline-none">수업하기</h2>
               <p>학생들을 초대하여 새로운 수업 경험을 즐겨보세요</p>
             </a>
           </Link>

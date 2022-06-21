@@ -34,7 +34,7 @@ export default function create() {
   </TabList>
   <TabPanels>
     <TabPanel>
-    <p className="text-2xl">학급 관리</p>
+    <p className="text-2xl font-bold">학급 관리</p>
     
     <Select placeholder='학급반을 선택하세요'>
       <option value='option1'>3학년 1반</option>
@@ -54,7 +54,7 @@ export default function create() {
     <br></br>
     <hr></hr>
     <br></br>
-    <p className="text-2xl">학생 관리</p>
+    <p className="text-2xl font-bold">학생 관리</p>
       <div>
 <Badge colorScheme='purple' mx = {1}>강석진</Badge>
 <Badge colorScheme='red' mx = {1}>고동환</Badge>
@@ -105,23 +105,20 @@ export default function create() {
 </StatGroup>
 
 <br></br>
-<p className="text-2xl">최근에 푼 문제</p>
+<p className="text-2xl font-bold">최근에 푼 문제</p>
 <Accordion>
   <AccordionItem>
     <h2>
       <AccordionButton>
         <Box flex='1' textAlign='left'>
-          1단원. 우리나라의 다양한 하천
+          1단원. 우리나라의 다양한 하천 <Badge colorScheme='blue' mx = {1}>지구과학</Badge>
+  <Badge colorScheme='gray' mx = {1}>고등학교</Badge>
         </Box>
         <AccordionIcon />
       </AccordionButton>
     </h2>
     <AccordionPanel pb={4}>
     <div className="my-30 mx-30">
-  <br></br>
-  <span className="text-2xl"> 1단원. 우리나라의 다양한 하천 </span>
-  <Badge colorScheme='blue' mx = {1}>지구과학</Badge>
-  <Badge colorScheme='gray' mx = {1}>고등학교</Badge>
 
 <StatGroup>
   <Stat>
@@ -129,7 +126,7 @@ export default function create() {
     <StatNumber>96.2%</StatNumber>
     <StatHelpText>
       <StatArrow type='increase' />
-      23.36%
+      다른 반 대비 23.36%
     </StatHelpText>
   </Stat>
 
@@ -138,16 +135,21 @@ export default function create() {
     <StatNumber>보통</StatNumber>
     <StatHelpText>
       <StatArrow type='decrease' />
-      9.05%
+      다른 반 대비 9.05%
     </StatHelpText>
   </Stat>
   </StatGroup>
+
+  <br></br>
+  <p> exquiz.me에서 분석한 취약 문제입니다.</p>
   <Accordion>
   <AccordionItem>
     <h2>
       <AccordionButton>
         <Box flex='1' textAlign='left'>
-          문제 1
+          문제 30
+  <Badge colorScheme='red' mx = {1}>많이 틀린</Badge>
+  <Badge colorScheme='purple' mx = {1}>실수하기 쉬운</Badge>
         </Box>
         <AccordionIcon />
       </AccordionButton>
@@ -155,9 +157,6 @@ export default function create() {
     <AccordionPanel pb={4}>
     <div className="my-30 mx-30">
   <br></br>
-  <span className="text-2xl"> 문제 1 </span>
-  <Badge colorScheme='blue' mx = {1}>지구과학</Badge>
-  <Badge colorScheme='gray' mx = {1}>고등학교</Badge>
 
     <p className="text-2xl">우리나라에서 가장 높은 산은 뭘까요?</p>
     <SimpleGrid columns={2} spacing={5}>
@@ -165,7 +164,7 @@ export default function create() {
   <span className="text-1xl"> 1. 설악산 </span>
   <Stat>
     <StatLabel></StatLabel>
-    <StatNumber>96.2%</StatNumber>
+    <StatNumber>10%</StatNumber>
     <StatHelpText>
     </StatHelpText>
   </Stat>
@@ -174,7 +173,7 @@ export default function create() {
   <span className="text-1xl"> 2. 지리산 </span>
   <Stat>
     <StatLabel></StatLabel>
-    <StatNumber>10%</StatNumber>
+    <StatNumber>15%</StatNumber>
     <StatHelpText>
     </StatHelpText>
   </Stat>
@@ -183,7 +182,7 @@ export default function create() {
   <span className="text-1xl"> 3. 한라산 </span>
   <Stat>
     <StatLabel></StatLabel>
-    <StatNumber>70%</StatNumber>
+    <StatNumber>65%</StatNumber>
     <StatHelpText>
     </StatHelpText>
   </Stat>
@@ -192,7 +191,7 @@ export default function create() {
   <span className="text-1xl"> 4. 북한산 </span>
   <Stat>
     <StatLabel></StatLabel>
-    <StatNumber>96.2%</StatNumber>
+    <StatNumber>10%</StatNumber>
     <StatHelpText>
     </StatHelpText>
   </Stat>
@@ -208,7 +207,9 @@ export default function create() {
     <h2>
       <AccordionButton>
         <Box flex='1' textAlign='left'>
-          문제 2
+          문제 21&nbsp;
+          <Badge colorScheme='red' mx = {1}>많이 틀린</Badge>
+  <Badge colorScheme='green' mx = {1}>오래 걸리는</Badge>
         </Box>
         <AccordionIcon />
       </AccordionButton>
@@ -216,9 +217,6 @@ export default function create() {
     <AccordionPanel pb={4}>
     <div className="my-30 mx-30">
   <br></br> 
-  <span className="text-2xl"> 문제 2 </span>
-  <Badge colorScheme='blue' mx = {1}>물리학</Badge>
-  <Badge colorScheme='gray' mx = {1}>고등학교</Badge>
 
 
   <br></br>
@@ -231,16 +229,14 @@ export default function create() {
     <h2>
       <AccordionButton>
         <Box flex='1' textAlign='left'>
-          문제 3
+          문제 19&nbsp;
+          <Badge colorScheme='blue' mx = {1}>헷갈리는</Badge>
         </Box>
         <AccordionIcon />
       </AccordionButton>
     </h2>
     <AccordionPanel pb={4}>
     <div className="my-30 mx-30"> 
-  <span className="text-2xl"> 문제 3 </span>
-  <Badge colorScheme='blue' mx = {1}>컴퓨터공학</Badge>
-  <Badge colorScheme='gray' mx = {1}>고등학교</Badge>
 
 
   </div>
