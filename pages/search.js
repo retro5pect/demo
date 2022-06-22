@@ -1,5 +1,6 @@
 import { info } from "daisyui/src/colors";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function create() {
   return (
@@ -11,7 +12,9 @@ export default function create() {
     </button>
   </div>
   <div className="flex-1">
+  <Link href="/../">
     <a className="btn btn-ghost normal-case text-xl">exquiz.me</a>
+    </Link>
   </div>
   <div className="flex-none">
     <button className="btn btn-square btn-ghost">

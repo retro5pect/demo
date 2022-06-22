@@ -12,7 +12,9 @@ export default function create() {
     </button>
   </div>
   <div className="flex-1">
+  <Link href="/../">
     <a className="btn btn-ghost normal-case text-xl">exquiz.me</a>
+    </Link>
   </div>
   <div className="flex-none">
     <button className="btn btn-square btn-ghost">
