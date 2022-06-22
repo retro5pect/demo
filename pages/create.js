@@ -3,6 +3,7 @@ import {Grid, GridItem, Stack, InputGroup, InputLeftElement, PhoneIcon, Input, I
 import {Tabs, TabList, Tab, TabPanels, TabPanel, RadioGroup} from "@chakra-ui/react";
 import {SimpleGrid, Box, Button, Badge, IconButton} from "@chakra-ui/react";
 import { Icon, CopyIcon, DeleteIcon, ExternalLinkIcon } from "@chakra-ui/icons"
+import {Stat, StatLabel, StatNumber, StatHelpText, Tooltip} from "@chakra-ui/react"
 
 export default function create() {
   return (
@@ -36,57 +37,89 @@ export default function create() {
       </div>
       <Grid className="mx-10"templateColumns='repeat(5, 1fr)' gap={6}>
   <GridItem w='100%' h='100' bg='gray.100' />
-  <GridItem w='100%' h='100' bg='white' />
+  <GridItem w='100%' h='100' bg='gray.100' />
   <GridItem w='100%' h='100' bg='gray.100' />
   <GridItem w='100%' h='100' bg='gray.100' />
   <GridItem w='100%' h='100' bg='gray.100' />
 </Grid>
+<br></br>
+<div className="mx-10">
+<Tooltip label="복사하기" arial-label="A tooltip" placement="top">
+<IconButton aria-label='Search database' icon={<CopyIcon />} />
+</Tooltip>
+    &nbsp;
+    <Tooltip label="가져오기" arial-label="A tooltip" placement="top">
+    <IconButton aria-label='Search database' icon={<ExternalLinkIcon />} />
+    </Tooltip>
+    &nbsp;
+    <Tooltip label="삭제하기" arial-label="A tooltip" placement="top">
+    <IconButton aria-label='Search database' icon={<DeleteIcon />} />
+    </Tooltip>
+    </div>
 
 <div className="mx-10 my-5">
 <Tabs variant='enclosed'>
   <TabList>
     <Tab>객관식</Tab>
-    <Tab>주관식</Tab>
     <Tab>O/X</Tab>
     <Tab>넌센스</Tab>
   </TabList>
   <TabPanels>
     <TabPanel>
-    <IconButton aria-label='Search database' icon={<CopyIcon />} />
-    &nbsp;
-    <IconButton aria-label='Search database' icon={<ExternalLinkIcon />} />
-    &nbsp;
-    <IconButton aria-label='Search database' icon={<DeleteIcon />} />
+    <p className="text-2xl">미리보기</p>
+    <br></br>
+    <Input placeholder='문제 내용을 입력하세요.' />
     <br></br>
     <br></br>
-<Input placeholder='문제 내용을 입력하세요.' />
-<br></br>
-<br></br>
-<RadioGroup defaultValue='2'>
+    <RadioGroup defaultValue='1'>
   <Stack spacing={5} direction='row'>
-    <Radio colorScheme='blue' value='1'>
-    <Input placeholder='선지 1' />
-    </Radio>
-    <Radio colorScheme='blue' value='3'>
-    <Input placeholder='선지 2' />
-    </Radio>
-    <Radio colorScheme='blue' value='4'>
-    <Input placeholder='선지 3' />
-    </Radio>
-    <Radio colorScheme='blue' value='5'>
-    <Input placeholder='선지 4' />
-    </Radio>
+    <Radio size='lg' colorScheme='red' value='1' />
+    <Radio size='lg' colorScheme='orange' value='1' />
+    <Radio size='lg' colorScheme='yellow' value='1' />
+    <Radio size='lg' colorScheme='green' value='1' />
+    <Radio size='lg' colorScheme='blue' value='1' />
+    <Radio size='lg' colorScheme='purple' value='1' />
+    <Radio size='lg' colorScheme='black' value='1' />
   </Stack>
 </RadioGroup>
+<br></br>
+<RadioGroup defaultValue='2'>
+    <SimpleGrid columns={2} spacing={5}>
+
+  <Box bg='Crimson' height='80px' className="text-center my-auto rounded-lg">
+    <div className="my-2 mx-5">
+  <Radio colorScheme='blue' value='1' />
+    <Input variant='filled' placeholder='선지 1' />
+  </div>
+  </Box>
+  <Box bg='DodgerBlue' height='80px' className="text-center my-auto rounded-lg">
+  <div className="my-2 mx-5">
+  <Radio colorScheme='blue' value='3' />
+    <Input variant='filled' placeholder='선지 2' />
+  </div>
+  </Box>
+  <Box bg='LimeGreen' height='80px' className="text-center my-auto rounded-lg">
+  <div className="my-2 mx-5">
+  <Radio colorScheme='blue' value='4' />
+    <Input variant='filled' placeholder='선지 3' />
+  </div>
+  </Box>
+  <Box bg='Gold' height='80px' className="text-center my-auto rounded-lg">
+  <div className="my-2 mx-5">
+  <Radio colorScheme='blue' value='5' />
+    <Input variant='filled' placeholder='선지 4' />
+  </div>
+  </Box>
+</SimpleGrid>
+</RadioGroup>
+<br></br>
+<hr></hr>
 <br></br>
 <Input placeholder='태그 추가하기' className="inline"/>
 <Badge colorScheme='red' mx = {1}>객관식</Badge>
 <Badge colorScheme='blue' mx = {1}>지구과학</Badge>
 <Badge colorScheme='gray' mx = {1}>고등학교</Badge>
 
-    </TabPanel>
-    <TabPanel>
-      <p>주관식</p>
     </TabPanel>
     <TabPanel>
       <p>o/x</p>
