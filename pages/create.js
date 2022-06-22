@@ -1,7 +1,6 @@
-import { info } from "daisyui/src/colors";
 import Link from "next/link";
 import {Grid, GridItem, Stack, InputGroup, InputLeftElement, PhoneIcon, Input, InputRightElement, CheckIcon, Radio, chakra} from "@chakra-ui/react";
-import {Tabs, TabList, Tab, TabPanels, TabPanel} from "@chakra-ui/react";
+import {Tabs, TabList, Tab, TabPanels, TabPanel, RadioGroup, CopyIcon, DeleteIcon} from "@chakra-ui/react";
 
 export default function create() {
   return (
@@ -48,18 +47,29 @@ export default function create() {
   </TabList>
   <TabPanels>
     <TabPanel>
+
     <Input placeholder='퀴즈 제목을 입력하세요.' />
 <br></br><br></br>
 <Input placeholder='퀴즈 내용을 입력하세요.' />
 <br></br>
 <br></br>
-<Radio size='md' name='1' colorScheme='blue' /><Input placeholder='퀴즈 선지를 입력하세요.' />
-<br></br>
-<Radio size='md' name='1' colorScheme='blue' /><Input placeholder='퀴즈 선지를 입력하세요.' />
-<br></br>
-<Radio size='md' name='1' colorScheme='blue' /><Input placeholder='퀴즈 선지를 입력하세요.' />
-<br></br>
-<Radio size='md' name='1' colorScheme='blue' /><Input placeholder='퀴즈 선지를 입력하세요.' />
+<RadioGroup defaultValue='2'>
+  <Stack spacing={5} direction='row'>
+    <Radio colorScheme='blue' value='1'>
+    <Input placeholder='선지 1' />
+    </Radio>
+    <Radio colorScheme='blue' value='3'>
+    <Input placeholder='선지 2' />
+    </Radio>
+    <Radio colorScheme='blue' value='4'>
+    <Input placeholder='선지 3' />
+    </Radio>
+    <Radio colorScheme='blue' value='5'>
+    <Input placeholder='선지 4' />
+    </Radio>
+  </Stack>
+</RadioGroup>
+
     </TabPanel>
     <TabPanel>
       <p>two!</p>
