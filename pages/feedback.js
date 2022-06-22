@@ -46,7 +46,7 @@ export default function create() {
     <p className="text-2xl font-bold">다른 반 대비 </p>
     <p>exquiz.me에서 분석한 취약 퀴즈입니다.</p>
 
-<Accordion>
+<Accordion allowToggle>
   <AccordionItem>
     <h2>
     <Tooltip label="퀴즈 횟수 : 1 / 정답률 : 10%" arial-label="A tooltip" placement="top">
@@ -87,7 +87,7 @@ export default function create() {
 
   <br></br>
   <p> exquiz.me에서 분석한 취약 문제입니다.</p>
-  <Accordion>
+  <Accordion allowToggle>
   <AccordionItem>
     <h2>
       <AccordionButton>
@@ -191,7 +191,7 @@ export default function create() {
     </AccordionPanel>
   </AccordionItem>
 
-</Accordion>
+</Accordion >
     <br></br>
     <hr></hr>
   </div>
@@ -338,7 +338,7 @@ export default function create() {
 
 <br></br>
 <p className="text-2xl font-bold">최근에 푼 퀴즈</p>
-<Accordion>
+<Accordion allowToggle>
   <AccordionItem>
     <h2>
       <AccordionButton>
@@ -374,7 +374,7 @@ export default function create() {
 
   <br></br>
   <p> exquiz.me에서 분석한 취약 문제입니다.</p>
-  <Accordion>
+  <Accordion allowToggle>
   <AccordionItem>
     <h2>
       <AccordionButton>
