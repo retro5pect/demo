@@ -4,9 +4,45 @@ import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import { HStack, PinInput, PinInputField } from "@chakra-ui/react";
 import { Icon } from '@chakra-ui/react'
-import { Button, ButtonGroup } from '@chakra-ui/react'
+import { Button, ButtonGroup, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerBody, DrawerHeader, DrawerFooter, Input } from '@chakra-ui/react'
 
 export default function Home() {
+
+  function IndexDrawer() {
+    const { isOpen, onOpen, onClose } = useDisclosure()
+    const btnRef = React.useRef()
+  
+    return (
+      <>
+        <Button ref={btnRef} colorScheme='teal' onClick={onOpen}>
+          Open
+        </Button>
+        <Drawer
+          isOpen={isOpen}
+          placement='right'
+          onClose={onClose}
+          finalFocusRef={btnRef}
+        >
+          <DrawerOverlay />
+          <DrawerContent>
+            <DrawerCloseButton />
+            <DrawerHeader>Create your account</DrawerHeader>
+  
+            <DrawerBody>
+              <Input placeholder='Type here...' />
+            </DrawerBody>
+  
+            <DrawerFooter>
+              <Button variant='outline' mr={3} onClick={onClose}>
+                Cancel
+              </Button>
+              <Button colorScheme='blue'>Save</Button>
+            </DrawerFooter>
+          </DrawerContent>
+        </Drawer>
+      </>
+    )
+  }
 
   return (
     <div className={styles.container}>
@@ -61,7 +97,7 @@ export default function Home() {
         <div className={styles.grid}>
           <Link href="/teach">
             <a className={styles.card}>
-              <h2 className="text-center hover:bg-violet-600 active:bg-violet-700 focus:outline-none">수업하기</h2>
+              <h2 className="text-center">수업하기</h2>
               <p>학생들을 초대하여 새로운 수업 경험을 즐겨보세요</p>
             </a>
           </Link>
@@ -75,7 +111,7 @@ export default function Home() {
 
           <Link href="/feedback">
             <a className={styles.card}>
-              <h2 className="text-center">평가받기</h2>
+              <h2 className="text-center">평가하기</h2>
               <p>학생 개인의 맞춤화된 지표를 통해 성취도를 설정해보세요 </p>
             </a>
           </Link>

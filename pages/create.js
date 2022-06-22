@@ -1,5 +1,7 @@
 import { info } from "daisyui/src/colors";
 import Link from "next/link";
+import {Grid, GridItem, Stack, InputGroup, InputLeftElement, PhoneIcon, Input, InputRightElement, CheckIcon, Radio, chakra} from "@chakra-ui/react";
+import {Tabs, TabList, Tab, TabPanels, TabPanel} from "@chakra-ui/react";
 
 export default function create() {
   return (
@@ -20,172 +22,56 @@ export default function create() {
   </div>
 </div>
 
-      <div className="my-10 flex justify-center">
+      <div className="my-2 flex justify-center">
         <ul className="steps">
           <li className="step step-primary">1. 퀴즈 설정</li>
           <li className="step step-primary">2. 문제 설정</li>
           <li li className="step">
             3. 완료!
           </li>
-          <li className="step">4. 부가 설정</li>
         </ul>
       </div>
+      <Grid className="mx-10"templateColumns='repeat(5, 1fr)' gap={6}>
+  <GridItem w='100%' h='100' bg='gray.100' />
+  <GridItem w='100%' h='100' bg='gray.100' />
+  <GridItem w='100%' h='100' bg='gray.100' />
+  <GridItem w='100%' h='100' bg='gray.100' />
+  <GridItem w='100%' h='100' bg='gray.100' />
+</Grid>
 
-      <div className="flex justify-between">
-        <div>
-          <div className="card w-48 bg-base-100 shadow-xl">
-            <div className="card-body">
-              <div className="card-actions justify-end">
-                <button className="btn btn-square btn-sm">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  </svg>
-                </button>
-              </div>
-              <p>Q1.</p>
-            </div>
-          </div>
+<div className="mx-10 my-5">
+<Tabs variant='enclosed'>
+  <TabList>
+    <Tab>객관식</Tab>
+    <Tab>주관식</Tab>
+    <Tab>O/X</Tab>
+  </TabList>
+  <TabPanels>
+    <TabPanel>
+    <Input placeholder='퀴즈 제목을 입력하세요.' />
+<br></br><br></br>
+<Input placeholder='퀴즈 내용을 입력하세요.' />
+<br></br>
+<br></br>
+<Radio size='md' name='1' colorScheme='blue' /><Input placeholder='퀴즈 선지를 입력하세요.' />
+<br></br>
+<Radio size='md' name='1' colorScheme='blue' /><Input placeholder='퀴즈 선지를 입력하세요.' />
+<br></br>
+<Radio size='md' name='1' colorScheme='blue' /><Input placeholder='퀴즈 선지를 입력하세요.' />
+<br></br>
+<Radio size='md' name='1' colorScheme='blue' /><Input placeholder='퀴즈 선지를 입력하세요.' />
+    </TabPanel>
+    <TabPanel>
+      <p>two!</p>
+    </TabPanel>
+    <TabPanel>
+      <p>two!</p>
+    </TabPanel>
+  </TabPanels>
+</Tabs>
 
-          <div className="card w-48 bg-base-100 shadow-xl">
-            <div className="card-body">
-              <div className="card-actions justify-end">
-                <button className="btn btn-square btn-sm">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  </svg>
-                </button>
-              </div>
-              <p>Q2.</p>
-            </div>
-          </div>
+</div>
 
-          <div className="card w-48 bg-base-100 shadow-xl">
-            <div className="card-body">
-              <div className="card-actions justify-end">
-                <button className="btn btn-square btn-sm">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  </svg>
-                </button>
-              </div>
-              <p>Q3.</p>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <div clasNames="form-control w-full max-w-xs">
-            <label className="label">
-              <span className="label-text">Step 1. 퀴즈 질문을 입력하세요</span>
-            </label>
-            <input
-              type="text"
-              placeholder="Type here"
-              className="input input-bordered w-full max-w-xs"
-            />
-          </div>
-          <br />
-          <div clasNames="form-control w-full max-w-xs">
-            <label className="label">
-              <span className="label-text">Step 2. 퀴즈 내용을 입력하세요</span>
-            </label>
-            <input
-              type="text"
-              placeholder="Type here"
-              className="input input-bordered w-full max-w-xs"
-            />
-          </div>
-          <br />
-
-          <div clasNames="form-control w-full max-w-xs">
-            <label className="label">
-              <span className="label-text">Step 3. 퀴즈 선지를 입력하세요</span>
-            </label>
-          </div>
-
-          <div>
-            <div className="form-control">
-              <label className="label cursor-pointer">
-                <span className="label-text">1. 지리산</span>
-                <input
-                  type="radio"
-                  name="radio-6"
-                  className="radio checked:bg-red-500"
-                  checked
-                />
-              </label>
-            </div>
-            <div className="form-control">
-              <label className="label cursor-pointer">
-                <span className="label-text">2. 설악산</span>
-                <input
-                  type="radio"
-                  name="radio-6"
-                  className="radio checked:bg-blue-500"
-                  checked
-                />
-              </label>
-            </div>
-            <div className="form-control">
-              <label className="label cursor-pointer">
-                <span className="label-text">3. 한라산</span>
-                <input
-                  type="radio"
-                  name="radio-6"
-                  className="radio checked:bg-orange-500"
-                  checked
-                />
-              </label>
-            </div>
-            <div className="form-control">
-              <label className="label cursor-pointer">
-                <span className="label-text">4. 북한산</span>
-                <input
-                  type="radio"
-                  name="radio-6"
-                  className="radio checked:bg-green-500"
-                  checked
-                />
-              </label>
-            </div>
-          </div>
-        </div>
-
-        <div className="w-48"></div>
-      </div>
     </div>
   );
 }
